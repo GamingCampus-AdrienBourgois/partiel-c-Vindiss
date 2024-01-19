@@ -6,31 +6,38 @@
 
 float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, TemperatureUnits _to)
 {
+	float result = 0.f;
 	if (_from == TemperatureUnits::CELSIUS && _to == TemperatureUnits::FAHRENHEIT)
 	{
-		_value = ((9 / 5) * _value) + 32;
+		result = ((9.0 / 5.0) * _value) + 32;
+		return result;
 	}
 	else if (_from == TemperatureUnits::CELSIUS && _to == TemperatureUnits::KELVIN)
 	{
-		_value = _value + 273,15;
+		result = _value + 273.15;
+		return result;
 	}
 	else if (_from == TemperatureUnits::FAHRENHEIT && _to == TemperatureUnits::KELVIN)
 	{
-		_value = ((5 / 9) * (_value - 32)) + 273,15;
+		result = ((5.0 / 9.0) * (_value - 32)) + 273.15;
+		return result;
 	}
 	else if (_from == TemperatureUnits::FAHRENHEIT && _to == TemperatureUnits::CELSIUS)
 	{
-		_value = (5 / 9) * (_value - 32);
+		result = (5.0 / 9.0) * (_value - 32);
+		return result;
 	}
 	else if (_from == TemperatureUnits::KELVIN && _to == TemperatureUnits::CELSIUS)
 	{
-		_value = _value - 273,15;
+		result = _value - 273.15;
+		return result;
 	}
 	else if (_from == TemperatureUnits::KELVIN && _to == TemperatureUnits::FAHRENHEIT)
 	{
-		_value = ((9 / 5) * (_value - 273,15)) + 32;
+		result = ((9.0 / 5.0) * (_value - 273.15)) + 32;
+		return result;
 	}
-	return _value;
+	return result;
 }
 
 #endif
