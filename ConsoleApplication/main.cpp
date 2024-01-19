@@ -18,8 +18,8 @@ int main(int argc, char** argv)
 
 	// You can use this function to test a specific exercice, for example exercice 1 test 1
 	// You can test multiple exercices by calling multiple times the function AutograderRunTest
-	ExerciceBase::AutograderRunTest(1, 1);
-	ExerciceBase::AutograderRunTest(1, 1);
+	ExerciceBase::AutograderRunTest(2, 2);
+	ExerciceBase::AutograderRunTest(2, 2);
 
 	return 0;
 
